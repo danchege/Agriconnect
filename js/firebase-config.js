@@ -3,16 +3,18 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
 // Your web app's Firebase configuration
-// Replace these values with your Firebase project configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyADQXfDM6irt9DBc9kCsW9TCVfdqA0knXo",
+    authDomain: "agriconnect-e8ef7.firebaseapp.com",
+    databaseURL: "https://agriconnect-e8ef7-default-rtdb.firebaseio.com",
+    projectId: "agriconnect-e8ef7",
+    storageBucket: "agriconnect-e8ef7.firebasestorage.app",
+    messagingSenderId: "115792949632",
+    appId: "1:115792949632:web:3d1fbcd9532d229cf71165",
+    measurementId: "G-1ZP0Z56LCT"
 };
 
 // Initialize Firebase
@@ -20,5 +22,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
+const analytics = getAnalytics(app);
 
-export { app, auth, db, storage }; 
+export { app, auth, db, storage, analytics }; 

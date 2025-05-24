@@ -5,7 +5,7 @@ import {
     signOut,
     onAuthStateChanged 
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 // Register new user
 export async function registerUser(userData) {
@@ -25,11 +25,9 @@ export async function registerUser(userData) {
             email: userData.email,
             location: userData.location,
             createdAt: new Date(),
-            // Additional fields for sellers
-            ...(userData.userType === 'seller' && {
-                farmDetails: userData.farmDetails,
+            // Additional fields for farmers
+            ...(userData.userType === 'farmer' && {
                 products: userData.products,
-                farmSize: userData.farmSize,
                 farmLocation: userData.farmLocation
             }),
             // Additional fields for buyers
@@ -37,7 +35,7 @@ export async function registerUser(userData) {
                 companyName: userData.companyName,
                 buyerType: userData.buyerType,
                 interestedProducts: userData.interestedProducts,
-                transportAvailable: userData.transportAvailable
+                transportAvailable: userData.transport
             })
         });
 
@@ -69,21 +67,9 @@ export async function logoutUser() {
     }
 }
 
-// Get current user profile
-export async function getCurrentUserProfile() {
-    const user = auth.currentUser;
-    if (!user) return null;
-
-    try {
-        const userDoc = await getDoc(doc(db, 'users', user.uid));
-        if (userDoc.exists()) {
-            return { id: user.uid, ...userDoc.data() };
-        }
-        return null;
-    } catch (error) {
-        console.error('Error getting user profile:', error);
-        throw error;
-    }
+// Get current user
+export function getCurrentUser() {
+    return auth.currentUser;
 }
 
 // Listen to auth state changes
