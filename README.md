@@ -1,5 +1,7 @@
 # AgriConnect Kenya
 
+Live Demo Link: https://agriconnect-e8ef7.web.app/
+
 AgriConnect is a web application that connects Kenyan farmers with buyers, providing real-time market prices, analytics, and direct communication channels.
 
 ## Features
