@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Alerts - AgriConnect Kenya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf orbit-icon"></i>
+            <span>AgriConnect</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="my-products.html">My Products</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li class="user-menu">
+                <button class="user-btn">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="user-name">Loading...</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="dashboard-container">
+        <div class="alerts-container">
+            <h1>Price Alerts</h1>
+            
+            <div class="alerts-section">
+                <h2>Set New Alert</h2>
+                <form id="price-alert-form">
+                    <div class="form-group">
+                        <label for="product">Product</label>
+                        <select id="product" name="product" required>
+                            <option value="">Select Product</option>
+                            <!-- Products will be loaded dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="targetPrice">Target Price (KES/kg)</label>
+                        <input type="number" id="targetPrice" name="targetPrice" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="condition">Alert Condition</label>
+                        <select id="condition" name="condition" required>
+                            <option value="above">Price goes above</option>
+                            <option value="below">Price goes below</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notificationMethod">Notification Method</label>
+                        <select id="notificationMethod" name="notificationMethod" required>
+                            <option value="email">Email</option>
+                            <option value="sms">SMS</option>
+                            <option value="both">Both Email & SMS</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Set Alert</button>
+                </form>
+            </div>
+
+            <div class="alerts-section">
+                <h2>Your Active Alerts</h2>
+                <div id="active-alerts" class="alerts-list">
+                    <!-- Active alerts will be loaded here -->
+                    <p class="loading">Loading your alerts...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/price-alerts.js"></script>
+</body>
+</html> 

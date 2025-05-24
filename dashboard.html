@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AgriConnect Kenya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf orbit-icon"></i>
+            <span>AgriConnect</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="my-products.html">My Products</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li class="user-menu">
+                <button class="user-btn">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="user-name">Loading...</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <div class="welcome-section">
+            <h1>Welcome back, <span class="user-display-name">User</span>!</h1>
+            <p class="last-login">Last login: <span id="last-login-time">Loading...</span></p>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Quick Stats -->
+            <div class="dashboard-card stats">
+                <h2>Quick Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-box"></i>
+                        <span class="stat-value" id="products-count">0</span>
+                        <span class="stat-label">Products Listed</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-message"></i>
+                        <span class="stat-value" id="messages-count">0</span>
+                        <span class="stat-label">New Messages</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="stat-value" id="views-count">0</span>
+                        <span class="stat-label">Profile Views</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Prices -->
+            <div class="dashboard-card market-prices">
+                <h2>Latest Market Prices</h2>
+                <div class="price-list" id="market-prices-list">
+                    <p class="loading">Loading market prices...</p>
+                </div>
+                <a href="market-prices.html" class="view-all">View All Prices</a>
+            </div>
+
+            <!-- Recent Messages -->
+            <div class="dashboard-card messages">
+                <h2>Recent Messages</h2>
+                <div class="messages-list" id="recent-messages">
+                    <p class="loading">Loading messages...</p>
+                </div>
+                <a href="messages.html" class="view-all">View All Messages</a>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="dashboard-card actions">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="add-product.html" class="action-btn">
+                        <i class="fas fa-plus"></i>
+                        Add New Product
+                    </a>
+                    <a href="price-alerts.html" class="action-btn">
+                        <i class="fas fa-bell"></i>
+                        Set Price Alert
+                    </a>
+                    <a href="market-analysis.html" class="action-btn">
+                        <i class="fas fa-chart-bar"></i>
+                        Market Analysis
+                    </a>
+                    <a href="connect.html" class="action-btn">
+                        <i class="fas fa-search"></i>
+                        Find Buyers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@agriconnect.co.ke</p>
+                <p>Phone: +254 713332171</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AgriConnect Kenya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html> 

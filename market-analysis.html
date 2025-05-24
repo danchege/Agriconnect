@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis - AgriConnect Kenya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf orbit-icon"></i>
+            <span>AgriConnect</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="my-products.html">My Products</a></li>
+            <li><a href="messages.html">Messages</a></li>
+            <li class="user-menu">
+                <button class="user-btn">
+                    <i class="fas fa-user-circle"></i>
+                    <span class="user-name">Loading...</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    <button id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="dashboard-container">
+        <div class="analysis-container">
+            <h1>Market Analysis</h1>
+
+            <div class="filters-section">
+                <div class="form-group">
+                    <label for="product">Product</label>
+                    <select id="product" name="product">
+                        <option value="">Select Product</option>
+                        <!-- Products will be loaded dynamically -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeRange">Time Range</label>
+                    <select id="timeRange" name="timeRange">
+                        <option value="7">Last 7 days</option>
+                        <option value="30">Last 30 days</option>
+                        <option value="90">Last 3 months</option>
+                        <option value="180">Last 6 months</option>
+                        <option value="365">Last year</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h2>Price Trends</h2>
+                    <canvas id="priceChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h2>Supply vs Demand</h2>
+                    <canvas id="supplyDemandChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h2>Regional Price Comparison</h2>
+                    <canvas id="regionalChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h2>Market Share by Region</h2>
+                    <canvas id="marketShareChart"></canvas>
+                </div>
+            </div>
+
+            <div class="insights-section">
+                <h2>Market Insights</h2>
+                <div id="marketInsights" class="insights-grid">
+                    <div class="insight-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Price Trend</h3>
+                        <p id="priceTrendInsight">Select a product to view price trends</p>
+                    </div>
+
+                    <div class="insight-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Supply & Demand</h3>
+                        <p id="supplyDemandInsight">Select a product to view supply and demand analysis</p>
+                    </div>
+
+                    <div class="insight-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Regional Analysis</h3>
+                        <p id="regionalInsight">Select a product to view regional market analysis</p>
+                    </div>
+
+                    <div class="insight-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Recommendations</h3>
+                        <p id="recommendations">Select a product to view recommendations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/market-analysis.js"></script>
+</body>
+</html> 

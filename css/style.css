@@ -55,44 +55,54 @@ body {
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 2rem;
     list-style: none;
 }
 
 .nav-links a {
+    color: #2c3e50;
     text-decoration: none;
-    color: var(--pure-black);
     font-weight: 500;
-    position: relative;
-    padding: 0.5rem 0;
+    transition: color 0.3s;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--secondary-blue);
-    transition: var(--transition);
+.nav-links a:hover {
+    color: #4CAF50;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a.active {
+    color: #4CAF50;
 }
 
-.register-btn {
-    background-color: var(--primary-blue);
-    color: var(--pure-white) !important;
-    padding: 0.5rem 1.5rem !important;
-    border-radius: 25px;
-    transition: var(--transition);
+/* Auth buttons in navigation */
+.nav-links .register-btn,
+.nav-links .login-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
 }
 
-.register-btn:hover {
-    background-color: var(--dark-blue);
-    transform: translateY(-2px);
+.nav-links .register-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nav-links .login-btn {
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    margin-left: -1rem;
+}
+
+.nav-links .register-btn:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.nav-links .login-btn:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 /* Hero Section */
