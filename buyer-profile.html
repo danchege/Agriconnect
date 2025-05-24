@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Profile - AgriConnect Kenya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buyer-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf orbit-icon"></i>
+            <span>AgriConnect</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="connect.html" class="active">Connect with Buyers</a></li>
+            <li><a href="alerts.html">Price Alerts</a></li>
+            <li><a href="register.html" class="register-btn">Register</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image">
+                <img src="" alt="Buyer Profile" id="buyerImage">
+            </div>
+            <div class="profile-info">
+                <h1 id="buyerName"></h1>
+                <span class="buyer-type" id="buyerType"></span>
+                <div class="verification-badge">
+                    <i class="fas fa-check-circle"></i> Verified Buyer
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-section">
+                <h2>About</h2>
+                <p id="buyerDescription"></p>
+            </div>
+
+            <div class="profile-section">
+                <h2>Contact Information</h2>
+                <p><i class="fas fa-envelope"></i> Email: <span id="buyerEmail"></span></p>
+                <p><i class="fas fa-phone"></i> Phone: <span id="buyerPhone"></span></p>
+                <p><i class="fas fa-map-marker-alt"></i> Location: <span id="buyerLocation"></span></p>
+            </div>
+
+            <div class="profile-section">
+                <h2>Products of Interest</h2>
+                <ul id="buyerProducts" class="products-list"></ul>
+            </div>
+
+            <div class="profile-section">
+                <h2>Transportation</h2>
+                <p id="buyerTransport"></p>
+            </div>
+
+            <div class="profile-actions">
+                <a href="#" class="contact-btn" id="contactButton">
+                    <i class="fas fa-envelope"></i> Contact Buyer
+                </a>
+                <a href="connect.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Buyers
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@agriconnect.co.ke</p>
+                <p>Phone: +254 700 000000</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AgriConnect Kenya. All rights reserved.</p>
+        </div>
+    </footer>
+
+        <script src="js/main.js"></script>    <script type="module" src="js/buyer-profile.js"></script>
+</body>
+</html> 

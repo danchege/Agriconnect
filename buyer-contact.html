@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Buyer - AgriConnect Kenya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buyer-contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf orbit-icon"></i>
+            <span>AgriConnect</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="connect.html" class="active">Connect with Buyers</a></li>
+            <li><a href="alerts.html">Price Alerts</a></li>
+            <li><a href="register.html" class="register-btn">Register</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <div class="contact-header">
+            <h1>Contact <span id="buyerName"></span></h1>
+            <p>Send a message to discuss your products and potential business opportunities</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="buyer-info-card">
+                <div class="buyer-header">
+                    <img src="" alt="Buyer Profile" id="buyerImage">
+                    <div class="buyer-details">
+                        <h2 id="buyerCompany"></h2>
+                        <span class="buyer-type" id="buyerType"></span>
+                        <div class="verification-badge">
+                            <i class="fas fa-check-circle"></i> Verified Buyer
+                        </div>
+                    </div>
+                </div>
+                <div class="buyer-contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Location: <span id="buyerLocation"></span></p>
+                    <p><i class="fas fa-shopping-basket"></i> Interested in: <span id="buyerProducts"></span></p>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Your Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="product">Product Details *</label>
+                    <input type="text" id="product" name="product" required placeholder="e.g., Fresh Tomatoes, 500kg">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required rows="5" placeholder="Describe your products, quantity available, and any other relevant details"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <a href="connect.html" class="back-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Buyers
+                    </a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@agriconnect.co.ke</p>
+                <p>Phone: +254 700 000000</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AgriConnect Kenya. All rights reserved.</p>
+        </div>
+    </footer>
+
+        <script src="js/main.js"></script>    <script type="module" src="js/buyer-contact.js"></script>
+</body>
+</html> 

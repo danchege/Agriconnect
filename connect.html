@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Buyers - AgriConnect Kenya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/connect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf orbit-icon"></i>
+            <span>AgriConnect</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="connect.html" class="active">Connect with Buyers</a></li>
+            <li><a href="alerts.html">Price Alerts</a></li>
+            <li><a href="register.html" class="register-btn">Register</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="connect-container">
+        <section class="connect-header">
+            <h1>Connect with Buyers</h1>
+            <p>Find and connect with verified buyers in your area</p>
+        </section>
+
+        <section class="connect-content">
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="product-search">Product</label>
+                    <input type="text" id="product-search" placeholder="Search by product...">
+                </div>
+                <div class="filter-group">
+                    <label for="county-filter">County</label>
+                    <select id="county-filter">
+                        <option value="">All Counties</option>
+                        <option value="baringo">Baringo</option>
+                        <option value="bomet">Bomet</option>
+                        <option value="bungoma">Bungoma</option>
+                        <option value="busia">Busia</option>
+                        <option value="elgeyo_marakwet">Elgeyo Marakwet</option>
+                        <option value="embu">Embu</option>
+                        <option value="garissa">Garissa</option>
+                        <option value="homa_bay">Homa Bay</option>
+                        <option value="isiolo">Isiolo</option>
+                        <option value="kajiado">Kajiado</option>
+                        <option value="kakamega">Kakamega</option>
+                        <option value="kericho">Kericho</option>
+                        <option value="kiambu">Kiambu</option>
+                        <option value="kilifi">Kilifi</option>
+                        <option value="kirinyaga">Kirinyaga</option>
+                        <option value="kisii">Kisii</option>
+                        <option value="kisumu">Kisumu</option>
+                        <option value="kitui">Kitui</option>
+                        <option value="kwale">Kwale</option>
+                        <option value="laikipia">Laikipia</option>
+                        <option value="lamu">Lamu</option>
+                        <option value="machakos">Machakos</option>
+                        <option value="makueni">Makueni</option>
+                        <option value="mandera">Mandera</option>
+                        <option value="marsabit">Marsabit</option>
+                        <option value="meru">Meru</option>
+                        <option value="migori">Migori</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="muranga">Murang'a</option>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="nakuru">Nakuru</option>
+                        <option value="nandi">Nandi</option>
+                        <option value="narok">Narok</option>
+                        <option value="nyamira">Nyamira</option>
+                        <option value="nyandarua">Nyandarua</option>
+                        <option value="nyeri">Nyeri</option>
+                        <option value="samburu">Samburu</option>
+                        <option value="siaya">Siaya</option>
+                        <option value="taita_taveta">Taita Taveta</option>
+                        <option value="tana_river">Tana River</option>
+                        <option value="tharaka_nithi">Tharaka Nithi</option>
+                        <option value="trans_nzoia">Trans Nzoia</option>
+                        <option value="turkana">Turkana</option>
+                        <option value="uasin_gishu">Uasin Gishu</option>
+                        <option value="vihiga">Vihiga</option>
+                        <option value="wajir">Wajir</option>
+                        <option value="west_pokot">West Pokot</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="buyer-type">Buyer Type</label>
+                    <select id="buyer-type">
+                        <option value="">All Types</option>
+                        <option value="wholesaler">Wholesaler</option>
+                        <option value="retailer">Retailer</option>
+                        <option value="processor">Processor</option>
+                        <option value="exporter">Exporter</option>
+                    </select>
+                </div>
+                <button class="search-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+
+            <div class="buyers-grid">
+                <!-- Sample Buyer Cards -->
+                <div class="buyer-card" data-buyer-id="1">
+                    <div class="buyer-header">
+                        <img src="https://via.placeholder.com/50" alt="Buyer Profile" class="buyer-image">
+                        <div class="buyer-info">
+                            <h3>Kenya Fresh Produce Ltd</h3>
+                            <span class="buyer-type wholesaler">Wholesaler</span>
+                        </div>
+                        <div class="verification-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="buyer-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <p><i class="fas fa-shopping-basket"></i> Interested in: Tomatoes, Potatoes, Onions</p>
+                        <p><i class="fas fa-truck"></i> Can arrange transport</p>
+                    </div>
+                    <div class="buyer-actions">
+                        <a href="buyer-contact.html?id=1" class="contact-btn"><i class="fas fa-envelope"></i> Contact</a>
+                        <a href="buyer-profile.html?id=1" class="view-btn"><i class="fas fa-eye"></i> View Profile</a>
+                    </div>
+                </div>
+
+                <div class="buyer-card" data-buyer-id="2">
+                    <div class="buyer-header">
+                        <img src="https://via.placeholder.com/50" alt="Buyer Profile" class="buyer-image">
+                        <div class="buyer-info">
+                            <h3>Nakuru Cereals Exporters</h3>
+                            <span class="buyer-type exporter">Exporter</span>
+                        </div>
+                        <div class="verification-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="buyer-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Nakuru, Kenya</p>
+                        <p><i class="fas fa-shopping-basket"></i> Interested in: Maize, Wheat, Beans</p>
+                        <p><i class="fas fa-truck"></i> Transport provided</p>
+                    </div>
+                    <div class="buyer-actions">
+                        <a href="buyer-contact.html?id=2" class="contact-btn"><i class="fas fa-envelope"></i> Contact</a>
+                        <a href="buyer-profile.html?id=2" class="view-btn"><i class="fas fa-eye"></i> View Profile</a>
+                    </div>
+                </div>
+
+                <div class="buyer-card" data-buyer-id="3">
+                    <div class="buyer-header">
+                        <img src="https://via.placeholder.com/50" alt="Buyer Profile" class="buyer-image">
+                        <div class="buyer-info">
+                            <h3>Mombasa Food Processors</h3>
+                            <span class="buyer-type processor">Processor</span>
+                        </div>
+                        <div class="verification-badge">
+                            <i class="fas fa-check-circle"></i> Verified
+                        </div>
+                    </div>
+                    <div class="buyer-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Mombasa, Kenya</p>
+                        <p><i class="fas fa-shopping-basket"></i> Interested in: Fruits, Vegetables</p>
+                        <p><i class="fas fa-truck"></i> Transport negotiable</p>
+                    </div>
+                    <div class="buyer-actions">
+                        <a href="buyer-contact.html?id=3" class="contact-btn"><i class="fas fa-envelope"></i> Contact</a>
+                        <a href="buyer-profile.html?id=3" class="view-btn"><i class="fas fa-eye"></i> View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="load-more-btn">
+                    <i class="fas fa-sync"></i> Load More
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@agriconnect.co.ke</p>
+                <p>Phone: +254 700 000000</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AgriConnect Kenya. All rights reserved.</p>
+        </div>
+    </footer>
+
+        <script src="js/main.js"></script>    <script type="module" src="js/connect.js"></script>
+</body>
+</html> 

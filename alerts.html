@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Alerts - AgriConnect Kenya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/alerts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf orbit-icon"></i>
+            <span>AgriConnect</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="market-prices.html">Market Prices</a></li>
+            <li><a href="connect.html">Connect with Buyers</a></li>
+            <li><a href="alerts.html" class="active">Price Alerts</a></li>
+            <li><a href="register.html" class="register-btn">Register</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="alerts-container">
+        <section class="alerts-header">
+            <h1>Price Alerts</h1>
+            <p>Get notified when market prices match your targets</p>
+        </section>
+
+        <section class="alerts-content">
+            <div class="create-alert">
+                <h2>Create New Alert</h2>
+                <form id="alert-form" class="alert-form">
+                    <div class="form-group">
+                        <label for="product">Product</label>
+                        <select id="product" name="product" required>
+                            <option value="">Select Product</option>
+                            <option value="maize">Maize</option>
+                            <option value="beans">Beans</option>
+                            <option value="potatoes">Potatoes</option>
+                            <option value="tomatoes">Tomatoes</option>
+                            <option value="onions">Onions</option>
+                            <option value="cabbage">Cabbage</option>
+                            <option value="carrots">Carrots</option>
+                            <option value="rice">Rice</option>
+                            <option value="wheat">Wheat</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="county">County</label>
+                        <select id="county" name="county" required>
+                            <option value="">Select County</option>
+                            <option value="baringo">Baringo</option>
+                            <option value="bomet">Bomet</option>
+                            <option value="bungoma">Bungoma</option>
+                            <option value="busia">Busia</option>
+                            <option value="elgeyo_marakwet">Elgeyo Marakwet</option>
+                            <option value="embu">Embu</option>
+                            <option value="garissa">Garissa</option>
+                            <option value="homa_bay">Homa Bay</option>
+                            <option value="isiolo">Isiolo</option>
+                            <option value="kajiado">Kajiado</option>
+                            <option value="kakamega">Kakamega</option>
+                            <option value="kericho">Kericho</option>
+                            <option value="kiambu">Kiambu</option>
+                            <option value="kilifi">Kilifi</option>
+                            <option value="kirinyaga">Kirinyaga</option>
+                            <option value="kisii">Kisii</option>
+                            <option value="kisumu">Kisumu</option>
+                            <option value="kitui">Kitui</option>
+                            <option value="kwale">Kwale</option>
+                            <option value="laikipia">Laikipia</option>
+                            <option value="lamu">Lamu</option>
+                            <option value="machakos">Machakos</option>
+                            <option value="makueni">Makueni</option>
+                            <option value="mandera">Mandera</option>
+                            <option value="marsabit">Marsabit</option>
+                            <option value="meru">Meru</option>
+                            <option value="migori">Migori</option>
+                            <option value="mombasa">Mombasa</option>
+                            <option value="muranga">Murang'a</option>
+                            <option value="nairobi">Nairobi</option>
+                            <option value="nakuru">Nakuru</option>
+                            <option value="nandi">Nandi</option>
+                            <option value="narok">Narok</option>
+                            <option value="nyamira">Nyamira</option>
+                            <option value="nyandarua">Nyandarua</option>
+                            <option value="nyeri">Nyeri</option>
+                            <option value="samburu">Samburu</option>
+                            <option value="siaya">Siaya</option>
+                            <option value="taita_taveta">Taita Taveta</option>
+                            <option value="tana_river">Tana River</option>
+                            <option value="tharaka_nithi">Tharaka Nithi</option>
+                            <option value="trans_nzoia">Trans Nzoia</option>
+                            <option value="turkana">Turkana</option>
+                            <option value="uasin_gishu">Uasin Gishu</option>
+                            <option value="vihiga">Vihiga</option>
+                            <option value="wajir">Wajir</option>
+                            <option value="west_pokot">West Pokot</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Target Price (KES)</label>
+                        <input type="number" id="price" name="price" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="condition">Price Condition</label>
+                        <select id="condition" name="condition" required>
+                            <option value="above">Above</option>
+                            <option value="below">Below</option>
+                            <option value="equals">Equals</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notification">Notification Method</label>
+                        <select id="notification" name="notification" required>
+                            <option value="sms">SMS</option>
+                            <option value="email">Email</option>
+                            <option value="both">Both SMS & Email</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="create-alert-btn">
+                        <i class="fas fa-bell"></i> Create Alert
+                    </button>
+                </form>
+            </div>
+
+            <div class="active-alerts">
+                <h2>Your Active Alerts</h2>
+                <div class="alerts-list">
+                    <div class="alert-card">
+                        <div class="alert-header">
+                            <h3>Maize Price Alert</h3>
+                            <span class="alert-status active">Active</span>
+                        </div>
+                        <div class="alert-details">
+                            <p><strong>Product:</strong> Maize</p>
+                            <p><strong>County:</strong> Nakuru</p>
+                            <p><strong>Target Price:</strong> KES 4,000</p>
+                            <p><strong>Condition:</strong> Below</p>
+                            <p><strong>Notification:</strong> SMS & Email</p>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="alert-card">
+                        <div class="alert-header">
+                            <h3>Potatoes Price Alert</h3>
+                            <span class="alert-status active">Active</span>
+                        </div>
+                        <div class="alert-details">
+                            <p><strong>Product:</strong> Potatoes</p>
+                            <p><strong>County:</strong> Nyandarua</p>
+                            <p><strong>Target Price:</strong> KES 3,500</p>
+                            <p><strong>Condition:</strong> Above</p>
+                            <p><strong>Notification:</strong> SMS</p>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@agriconnect.co.ke</p>
+                <p>Phone: +254 700 000000</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AgriConnect Kenya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/alerts.js"></script>
+</body>
+</html> 
