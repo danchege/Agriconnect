@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     setAlertButton.addEventListener('click', () => {
-        // This would open a modal or form to set price alerts
-        alert('Price alert feature coming soon!');
+        // Redirect to the alerts page
+        window.location.href = 'alerts.html';
     });
 
     // Initialize table
