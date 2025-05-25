@@ -240,6 +240,13 @@ body {
     margin-top: 2rem;
 }
 
+/* Add a gentle glow animation to the CTA buttons */
+@keyframes gentleGlow {
+    0% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+    50% { box-shadow: 0 4px 25px rgba(46, 125, 50, 0.3); }
+    100% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+}
+
 .cta-primary, .cta-secondary {
     padding: 1rem 2rem;
     border-radius: 30px;
@@ -252,7 +259,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: gentleGlow 4s ease-in-out infinite;
 }
 
 .cta-primary {
@@ -262,6 +269,7 @@ body {
 }
 
 .cta-primary:hover {
+    animation: none;
     background-color: var(--dark-blue);
     border-color: var(--dark-blue);
     transform: translateY(-3px);
@@ -275,6 +283,7 @@ body {
 }
 
 .cta-secondary:hover {
+    animation: none;
     background-color: var(--primary-blue);
     color: white;
     transform: translateY(-3px);
@@ -538,9 +547,26 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 3%;
+    }
+
+    .logo a {
+        padding: 0.3rem;
+    }
+
+    .logo .orbit-icon {
+        font-size: 1.5rem;
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+    }
+
     .hamburger {
         display: block;
         cursor: pointer;
+        margin-left: auto;
     }
 
     .hamburger span {
@@ -559,18 +585,33 @@ footer {
         left: 0;
         width: 100%;
         background-color: var(--pure-white);
-        padding: 2rem;
+        padding: 1rem;
         flex-direction: column;
         align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
         display: flex;
     }
 
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .nav-links .register-btn,
+    .nav-links .login-btn {
+        width: 100%;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
+        margin-top: 60px;
     }
 
     .orbit-container {
@@ -589,28 +630,23 @@ footer {
     }
 }
 
-/* Add a pulsing animation to the View Market Prices button */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-    50% {
-        transform: scale(1.01);
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
+/* Add a gentle float animation to the View Market Prices button */
+@keyframes gentleFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
 }
 
 .cta-secondary {
-    animation: pulse 8s ease-in-out infinite;  /* Increased from 6s to 8s and made scale even smaller */
+    animation: gentleFloat 3s ease-in-out infinite;
 }
 
 .cta-secondary:hover {
     animation: none;
+    background-color: var(--primary-blue);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .wow {
