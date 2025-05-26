@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/buyer-profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
-            <i class="fas fa-leaf orbit-icon"></i>
-            <span>AgriConnect</span>
+            <a href="index.html">
+                <div class="logo-icon wow animate__animated animate__fadeIn">
+                    <i class="fas fa-leaf orbit-icon"></i>
+                </div>
+                <div class="logo-text wow animate__animated animate__fadeIn">
+                    <span>AgriConnect</span>
+                </div>
+            </a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -106,6 +113,11 @@
         </div>
     </footer>
 
-        <script src="js/main.js"></script>    <script type="module" src="js/buyer-profile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/buyer-profile.js"></script>
 </body>
 </html> 
