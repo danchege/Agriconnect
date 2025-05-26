@@ -140,7 +140,7 @@ agriconnect/
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/agriconnect-kenya.git
+git clone https://github.com/danchege/Agriconnect.git
 cd agriconnect-kenya
 ```
 
@@ -162,8 +162,7 @@ npm run dev
 
 ## Contributing 🤝
 
-We welcome contributions to AgriConnect Kenya! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
+We welcome contributions to AgriConnect Kenya! 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
@@ -192,10 +191,6 @@ AgriConnect Kenya aims to:
 - Email: info@agriconnect.co.ke
 - Phone: +254 713332171
 - Website: [www.agriconnect.co.ke](https://www.agriconnect.co.ke)
-
-## License 📝
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments 🙏
 
