@@ -36,13 +36,13 @@ body {
 }
 
 .logo {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    min-width: 200px;
 }
 
 .logo a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem;
@@ -50,26 +50,51 @@ body {
     transition: all 0.3s ease;
 }
 
+.logo-icon {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo .orbit-icon {
     font-size: 1.8rem;
     color: var(--secondary-blue);
-    transition: color 0.3s ease;
-    margin-right: 0.5rem;
-    animation: float 3s ease-in-out infinite;
+    animation: spin 3s linear infinite;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
 }
 
-.logo span {
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.logo-text {
+    flex: 1;
+}
+
+.logo-text span {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-blue);
     transition: color 0.3s ease;
+    white-space: nowrap;
+    display: block;
 }
 
 .logo:hover .orbit-icon {
     color: var(--dark-blue);
 }
 
-.logo:hover span {
+.logo:hover .logo-text span {
     color: var(--dark-blue);
 }
 
